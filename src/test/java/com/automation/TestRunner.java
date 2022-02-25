@@ -116,7 +116,9 @@ public class TestRunner {
                         ikinci2=ikinci2.substring(1);
                         ilk1=ilk1.replace(",",".");
                         ikinci2=ikinci2.replace(",",".");
-                        if (Double.parseDouble(ilk1) <= Double.parseDouble(ikinci2)){
+                        ilk1=ilk1.replaceFirst("[.]","");
+                        ikinci2=ikinci2.replaceFirst("[.]","");
+                        if (Integer.parseInt(ilk1) <= Integer.parseInt(ikinci2)){
                                 flag = true;
                         }else {
                                 flag=false;
